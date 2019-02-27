@@ -1,7 +1,7 @@
 deployments:
   default:
-    port_mapping: 3000:3000
+    port_forwarding: 3000:3000
     post_launch:
-      - target: 'rails '
+      - target: 'rails'
         command: exec
         options: 'bundle exec rake db:setup'
