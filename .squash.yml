@@ -1,6 +1,7 @@
 deployments:
   default:
     port_forwarding: 3000:3000
+    copy_files: /dev/null ~/code/.env.development.local
     post_launch:
       - target: 'rails'
         command: exec
